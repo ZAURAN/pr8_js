@@ -1,0 +1,91 @@
+:root {
+    --primary-color: #5c67f2;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --button-color: #5c67f2;
+    --button-text-color: white;
+    --input-background: white;
+    --input-text-color: #333;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: var(--background-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+button, input[type="text"], input[type="checkbox"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+button {
+    background: var(--button-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #4a52e8;
+    transform: translateY(-2px);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: var(--input-background);
+    color: var(--input-text-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s;
+}
+
+li:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    width: 70%;
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    li label, li input[type="text"] {
+        font-size: 16px;
+    }
+
+    input[type="checkbox"], button {
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
